@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "cream",
+					"color": "#F8F3EB",
+					"name": "Cream"
+				},
+				{
+					"slug": "maroon",
+					"color": "#58272F",
+					"name": "Maroon"
+				}
+			]
+		},
+		"layout": {
+            "contentSize": "600px",
+            "wideSize": "1100px"
+        },
+		"typography": {
+			"fontFamilies": [
+                {
+					"name": "Cormorant Garamond",
+					"slug": "cormorant-garamond",
+					"fontFamily": "'Cormorant Garamond', serif",
+					"fontFace": [
+						{
+							"fontFamily": "Cormorant Garamond",
+							"fontWeight": "300 800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/CormorantGaramond-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "Cormorant Garamond",
+							"fontWeight": "300 800",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/CormorantGaramond-Italic.woff2" ]
+						}
+					]
+				},
+				{
+					"name": "Engravers Gothic BT",
+					"slug": "engravers-gothic-bt",
+					"fontFamily": "'Engravers Gothic BT', sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Engravers Gothic BT",
+							"fontWeight": "300 800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/EngraversGothic-BT-Regular.woff2" ]
+						}
+					]
+				}
+			],
+			"lineHeight": true
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+		}
+	}
+}

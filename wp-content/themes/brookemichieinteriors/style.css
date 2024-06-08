@@ -1,0 +1,130 @@
+/*
+Theme Name: Brooke Michie Interiors
+Theme URI: https://blogcto.com/projects/brooke-michie-interiors
+Author: Richard Seabrook (BlogCTO)
+Author URI: https://blogcto.com
+Description: A custom-built theme for Brooke Michie Interiors
+Requires at least: 6.1
+Tested up to: 6.2
+Requires PHP: 5.6
+Version: 1.0
+Text Domain: brooke_michie_interiors
+*/
+
+/*----------------------------------------------------------------------------
+	
+	Fonts
+	
+----------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('assets/fonts/CormorantGaramond-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    src: url('assets/fonts/CormorantGaramond-Italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Engravers Gothic BT';
+    src: url('assets/fonts/EngraversGothic-BT-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'gadabout-icons';
+    src: url('assets/fonts/gadabout-icons.woff2?73546164') format('woff2');
+}
+
+/*----------------------------------------------------------------------------
+	
+	Variables
+	
+----------------------------------------------------------------------------*/
+:root {
+
+    --font-cormorant-garamond: 'Cormorant Garamond';
+    --font-engravers-gothic: 'Engravers Gothic BT';
+    --font-icons: 'gadabout-icons';
+
+    --theme-color-cream: #F8F3EB;
+    --theme-color-darker-cream: #d9c7a9;
+    --theme-color-maroon: #58272F;
+    --theme-color-darker-maroon: #422328;
+}
+
+/*----------------------------------------------------------------------------
+	
+	General
+	
+----------------------------------------------------------------------------*/
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--theme-color-cream);
+}
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+#main {
+    max-width: 624px;
+    margin: 0 auto 200px auto;
+}
+
+/*----------------------------------------------------------------------------
+	
+	Template Parts
+	
+----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------
+	
+	Header
+	
+----------------------------------------------------------------------------*/
+.header {
+    margin-top: 160px;
+}
+.header .wordmark-wrapper {
+    margin-bottom: 120px;
+}
+.header .wordmark svg {
+    width: 390px;
+    max-width: 80%;
+}
+.header .logo-wrapper {
+    margin-bottom: 60px;
+}
+.header .logo svg {
+    width: 120px;
+    max-width: 40%;
+}
+.header .nav-wrapper {
+    margin-bottom: 60px;
+}
+.header .nav-wrapper .menu {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.header .nav-wrapper .menu li a {
+    padding: 10px;
+    color: var(--theme-color-maroon);
+    font-family: var(--font-engravers-gothic);
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 300ms ease;
+}
+.header .nav-wrapper .menu li a:hover {
+    color: var(--theme-color-darker-cream);
+}
+/*----------------------------------------------------------------------------
+	
+	Footer
+	
+----------------------------------------------------------------------------*/

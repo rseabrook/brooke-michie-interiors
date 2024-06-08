@@ -1,0 +1,46 @@
+services:
+    db:
+        image: mysql
+        platform: linux/x86_64
+        restart: always
+        volumes:
+            - db_data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: wordpress
+            MYSQL_USER: wordpress
+            MYSQL_PASSWORD: wordpress
+
+    wordpress:
+        depends_on:
+            - db
+        image: wordpress
+        restart: always
+        # Only mapping wp-content includes themes, plugins, and uploads but ignored core files
+        volumes:
+            - ./wp-content:/var/www/html/wp-content
+            - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+        environment:
+            WORDPRESS_DB_HOST: db:3306
+            WORDPRESS_DB_USER: wordpress
+            WORDPRESS_DB_PASSWORD: wordpress
+            WORDPRESS_DEBUG: 1
+            WORDPRESS_CONFIG_EXTRA: |
+                define('WP_DEBUG_LOG', true );
+        ports:
+            - 80:80
+            - 443:443
+
+    phpmyadmin:
+        depends_on:
+            - db
+        image: phpmyadmin
+        restart: always
+        ports:
+            - 8080:80
+        environment:
+            PMA_HOST: db
+            MYSQL_ROOT_PASSWORD: password
+
+volumes:
+    db_data:
