@@ -23,7 +23,7 @@ get_header(); ?>
                         <?php
                         while ( have_posts() ) : the_post();
                         ?>
-                            <div class="entry-content">
+                            <div class="entry-content px-3 px-md-0">
                                 <?php the_content(); ?>
                             </div><!-- .entry-content -->
 
